@@ -36,7 +36,7 @@ end
 
 for iOutput = iStart : nOutputs
     nLengths = size(OutputStructure(iOutput).lengths, 2);
-    for jLength = 1 : nLengths
+    for jLength = 1 : nLengths + 1
         nanIndices = find(isnan(OutputStructure(iOutput).residuals(jLength).D2));
         OutputStructure(iOutput).residuals(jLength).Angles(nanIndices) = [];
         OutputStructure(iOutput).residuals(jLength).D2(nanIndices) = [];

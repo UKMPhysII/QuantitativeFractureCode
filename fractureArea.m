@@ -23,6 +23,7 @@ addpath(genpath(pwd)) % Add current directory to the path, so that
 % This accounts for either a single image, or multiple images.
 if ischar(fileNames)
     nFiles = 1;
+    pathToggle = 0;
 else
     nFiles = length(fileNames);
     pathToggle = 1;
